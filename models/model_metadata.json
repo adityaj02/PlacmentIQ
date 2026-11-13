@@ -1,0 +1,153 @@
+{
+  "model_name": "xgboost",
+  "model_path": "D:\\Projects\\EduMatrix\\PlacementIQ\\models\\placement_model.joblib",
+  "training_date": "2026-11-13T22:32:13.294790",
+  "classification_threshold": 0.34999999999999987,
+  "features": [
+    "cgpa",
+    "backlogs",
+    "coding_skills",
+    "dsa_score",
+    "aptitude_score",
+    "communication_skills",
+    "ml_knowledge",
+    "system_design",
+    "internships",
+    "projects_count",
+    "certifications",
+    "hackathons",
+    "open_source_contributions",
+    "extracurriculars",
+    "branch",
+    "college_tier"
+  ],
+  "target": "placement_status",
+  "random_state": 42,
+  "cv_folds": 5,
+  "candidate_comparison": [
+    {
+      "Model": "logistic_regression",
+      "Accuracy": 0.6325,
+      "Precision": 0.7955,
+      "Recall": 0.6237,
+      "F1": 0.6992,
+      "ROC-AUC": 0.6856,
+      "PR-AUC": 0.8176,
+      "Brier Score": 0.224
+    },
+    {
+      "Model": "xgboost",
+      "Accuracy": 0.6947,
+      "Precision": 0.715,
+      "Recall": 0.9214,
+      "F1": 0.8052,
+      "ROC-AUC": 0.6795,
+      "PR-AUC": 0.8135,
+      "Brier Score": 0.1976
+    },
+    {
+      "Model": "random_forest",
+      "Accuracy": 0.6706,
+      "Precision": 0.7494,
+      "Recall": 0.7798,
+      "F1": 0.7643,
+      "ROC-AUC": 0.6724,
+      "PR-AUC": 0.8086,
+      "Brier Score": 0.2078
+    },
+    {
+      "Model": "extra_trees",
+      "Accuracy": 0.6442,
+      "Precision": 0.7687,
+      "Recall": 0.6873,
+      "F1": 0.7257,
+      "ROC-AUC": 0.6687,
+      "PR-AUC": 0.8065,
+      "Brier Score": 0.2184
+    }
+  ],
+  "cv_results": {
+    "logistic_regression": {
+      "accuracy_mean": 0.6291,
+      "accuracy_std": 0.0041,
+      "precision_mean": 0.7921,
+      "precision_std": 0.0042,
+      "recall_mean": 0.6214,
+      "recall_std": 0.0066,
+      "f1_mean": 0.6964,
+      "f1_std": 0.0043,
+      "roc_auc_mean": 0.6859,
+      "roc_auc_std": 0.0046,
+      "average_precision_mean": 0.8183,
+      "average_precision_std": 0.0036,
+      "brier_score_mean": 0.2241,
+      "brier_score_std": 0.0014
+    },
+    "random_forest": {
+      "accuracy_mean": 0.6729,
+      "accuracy_std": 0.0046,
+      "precision_mean": 0.7449,
+      "precision_std": 0.0017,
+      "recall_mean": 0.7945,
+      "recall_std": 0.0088,
+      "f1_mean": 0.7688,
+      "f1_std": 0.0044,
+      "roc_auc_mean": 0.6714,
+      "roc_auc_std": 0.0052,
+      "average_precision_mean": 0.8077,
+      "average_precision_std": 0.0035,
+      "brier_score_mean": 0.2072,
+      "brier_score_std": 0.0012
+    },
+    "extra_trees": {
+      "accuracy_mean": 0.6439,
+      "accuracy_std": 0.0056,
+      "precision_mean": 0.7652,
+      "precision_std": 0.0027,
+      "recall_mean": 0.6924,
+      "recall_std": 0.0084,
+      "f1_mean": 0.7269,
+      "f1_std": 0.0055,
+      "roc_auc_mean": 0.6673,
+      "roc_auc_std": 0.0041,
+      "average_precision_mean": 0.8038,
+      "average_precision_std": 0.0027,
+      "brier_score_mean": 0.218,
+      "brier_score_std": 0.0011
+    },
+    "xgboost": {
+      "accuracy_mean": 0.6975,
+      "accuracy_std": 0.0026,
+      "precision_mean": 0.7169,
+      "precision_std": 0.0009,
+      "recall_mean": 0.9224,
+      "recall_std": 0.0041,
+      "f1_mean": 0.8068,
+      "f1_std": 0.002,
+      "roc_auc_mean": 0.6796,
+      "roc_auc_std": 0.004,
+      "average_precision_mean": 0.8133,
+      "average_precision_std": 0.0031,
+      "brier_score_mean": 0.1975,
+      "brier_score_std": 0.0007
+    }
+  },
+  "test_metrics": {
+    "model_name": "logistic_regression",
+    "accuracy": 0.6325,
+    "precision": 0.7954735959765298,
+    "recall": 0.623658269441402,
+    "f1": 0.6991650294695482,
+    "roc_auc": 0.6855900394889339,
+    "pr_auc": 0.817572568610587,
+    "brier_score": 0.2240084431745032
+  },
+  "optimal_threshold": 0.20999999999999996,
+  "primary_model": "xgboost",
+  "primary_threshold": 0.33,
+  "optimal_threshold_selection_source": "5-Fold Stratified Out-Of-Fold Training Validation",
+  "calibration_notes": {
+    "brier_score_test": 0.1976,
+    "probability_interpretation": "Model-estimated probability from well-calibrated tree ensemble; not guaranteed real-world outcome"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-11-13T22:42:08.406179",
+  "correction_1_baselines": [
+    {
+      "model_name": "dummy_most_frequent",
+      "accuracy": 0.68475,
+      "precision": 0.68475,
+      "recall": 1.0,
+      "f1": 0.8128802492951477,
+      "roc_auc": 0.5,
+      "pr_auc": 0.68475,
+      "brier_score": 0.31525
+    },
+    {
+      "model_name": "dummy_stratified",
+      "accuracy": 0.5711,
+      "precision": 0.6861946001018848,
+      "recall": 0.6884994523548741,
+      "f1": 0.6873450940370316,
+      "roc_auc": 0.5022988935049548,
+      "pr_auc": 0.6857446063790195,
+      "brier_score": 0.4289
+    },
+    {
+      "model_name": "xgboost_default_0.50",
+      "accuracy": 0.6947,
+      "precision": 0.7149980168848094,
+      "recall": 0.9214311792625046,
+      "f1": 0.805193976518632,
+      "roc_auc": 0.6795080371952811,
+      "pr_auc": 0.8134515051213791,
+      "brier_score": 0.19764137268066406
+    }
+  ],
+  "correction_2_validation_threshold": {
+    "optimal_oof_threshold": 0.34999999999999987,
+    "test_comparison": [
+      {
+        "threshold": 0.5,
+        "accuracy": 0.6947,
+        "precision": 0.7149980168848094,
+        "recall": 0.9214311792625046,
+        "f1": 0.805193976518632,
+        "selection_source": "Default 0.50"
+      },
+      {
+        "threshold": 0.35,
+        "accuracy": 0.689,
+        "precision": 0.6896341772794155,
+        "recall": 0.9924790069368382,
+        "f1": 0.8137947551191475,
+        "selection_source": "Selected on Out-Of-Fold Training Validation"
+      }
+    ]
+  },
+  "correction_3_calibration": [
+    {
+      "Model": "Uncalibrated XGBoost",
+      "Brier_Score": 0.1976,
+      "ROC_AUC": 0.6795
+    },
+    {
+      "Model": "Calibrated (Sigmoid/Platt)",
+      "Brier_Score": 0.1974,
+      "ROC_AUC": 0.6816
+    },
+    {
+      "Model": "Calibrated (Isotonic)",
+      "Brier_Score": 0.1972,
+      "ROC_AUC": 0.6812
+    }
+  ],
+  "correction_4_ablation_experiment": {
+    "comparison": [
+      {
+        "model_name": "Full Model (With Tier)",
+        "accuracy": 0.6947,
+        "precision": 0.7149980168848094,
+        "recall": 0.9214311792625046,
+        "f1": 0.805193976518632,
+        "roc_auc": 0.6795080371952811,
+        "pr_auc": 0.8134515051213791,
+        "brier_score": 0.19764137268066406
+      },
+      {
+        "model_name": "Ablated Model (No Tier)",
+        "accuracy": 0.68975,
+        "precision": 0.7056110684089162,
+        "recall": 0.9384446878422782,
+        "f1": 0.8055407565263719,
+        "roc_auc": 0.6531946313116355,
+        "pr_auc": 0.7929482418115038,
+        "brier_score": 0.2026444971561432
+      }
+    ],
+    "deltas_ablated_minus_full": {
+      "accuracy": -0.005,
+      "precision": -0.0094,
+      "recall": 0.017,
+      "f1": 0.0003,
+      "roc_auc": -0.0263,
+      "pr_auc": -0.0205,
+      "brier_score": 0.005
+    }
+  },
+  "correction_5_shap_top_features": [
+    {
+      "feature": "college_tier_Tier-3",
+      "mean_abs_shap": 0.25715306401252747
+    },
+    {
+      "feature": "cgpa",
+      "mean_abs_shap": 0.20733322203159332
+    },
+    {
+      "feature": "internships",
+      "mean_abs_shap": 0.17949628829956055
+    },
+    {
+      "feature": "dsa_score",
+      "mean_abs_shap": 0.1720285266637802
+    },
+    {
+      "feature": "coding_skills",
+      "mean_abs_shap": 0.16401515901088715
+    },
+    {
+      "feature": "projects_count",
+      "mean_abs_shap": 0.13527560234069824
+    },
+    {
+      "feature": "college_tier_Tier-1",
+      "mean_abs_shap": 0.11475297063589096
+    },
+    {
+      "feature": "certifications",
+      "mean_abs_shap": 0.10870394855737686
+    },
+    {
+      "feature": "communication_skills",
+      "mean_abs_shap": 0.1046786978840828
+    },
+    {
+      "feature": "backlogs",
+      "mean_abs_shap": 0.09828449785709381
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "numerical_features": [
+    "cgpa",
+    "backlogs",
+    "coding_skills",
+    "dsa_score",
+    "aptitude_score",
+    "communication_skills",
+    "ml_knowledge",
+    "system_design",
+    "internships",
+    "projects_count",
+    "certifications",
+    "hackathons",
+    "open_source_contributions",
+    "extracurriculars"
+  ],
+  "categorical_features": [
+    "branch",
+    "college_tier"
+  ],
+  "all_features": [
+    "cgpa",
+    "backlogs",
+    "coding_skills",
+    "dsa_score",
+    "aptitude_score",
+    "communication_skills",
+    "ml_knowledge",
+    "system_design",
+    "internships",
+    "projects_count",
+    "certifications",
+    "hackathons",
+    "open_source_contributions",
+    "extracurriculars",
+    "branch",
+    "college_tier"
+  ],
+  "target": "placement_status",
+  "valid_branches": [
+    "ECE",
+    "Chemical",
+    "EE",
+    "CE",
+    "CSE",
+    "IT",
+    "ME"
+  ],
+  "valid_college_tiers": [
+    "Tier-1",
+    "Tier-2",
+    "Tier-3"
+  ]
+}
